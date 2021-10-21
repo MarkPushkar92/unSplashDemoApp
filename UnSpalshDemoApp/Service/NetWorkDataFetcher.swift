@@ -34,4 +34,17 @@ class NetWorkDataFetcher {
             return nil
         }
     }
+    
+//MARK: - Random Photo Logic
+    func fetchRandomImages(completion: @escaping (unImage?) -> ()) {
+        networkService.requestRandom { data, error in
+            if let error = error {
+                print("Error reciever requesting data: \(error.localizedDescription)")
+                completion(nil)
+            }
+            let decode = self.decodeJSON(type: unImage.self, from: data)
+            completion(decode)
+        }
+    }
+    
 }

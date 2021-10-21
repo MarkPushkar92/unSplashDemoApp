@@ -10,8 +10,6 @@ import Foundation
 struct SearchResults: Decodable {
     let total: Int
     let results: [UnsplashPhoto]
-    
-    
 }
 
 struct UnsplashPhoto: Decodable {
@@ -26,4 +24,26 @@ struct UnsplashPhoto: Decodable {
         case small
         case thumb
     }
+}
+
+
+
+//struct SearchRandomResults: Decodable {
+//    let results: [UnsplashPhoto]
+//}
+
+struct unImage: Decodable {
+    let id: String
+    let width: Int
+    let height: Int
+    let color: String
+    let urls: URLs
+}
+
+struct URLs: Decodable {
+    let raw: String
+    let full: String
+    let regular: String
+    let small: String
+    let thumb: String
 }

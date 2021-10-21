@@ -19,12 +19,12 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         view.backgroundColor = .systemBackground
         setupNavigationBar()
         setupCollectionView()
         setupSearchBar()
-       
+
+        
     }
     
 // MARK: - UI setup
